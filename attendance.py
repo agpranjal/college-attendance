@@ -5,7 +5,7 @@ import time
 URL = "http://45.124.144.116/www/stu/stulogin.php"
 CID = int(input("Enter CID: "))
 rollno = int(input("Enter university rollno: "))
-password = input("Enter MIS password")
+password = input("Enter MIS password: ")
 
 data = {
         "t1":CID,
