@@ -1,5 +1,5 @@
 # College-Attendance
-Script to check student's college attendance (BITR)
+Script to check student's college attendance (BITR) with just one line of code.
 
 ## Things needed to make sure before started.
 * Is python3 is downloaded? (command line:- python3 --version)
