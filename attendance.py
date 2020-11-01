@@ -14,7 +14,7 @@ data = {
 
 sess = requests.Session()
 ro = sess.post(URL, data)
-print("Logged in successfully. Fetching the attendance...")
+print("Logged in. Fetching the attendance...")
 
 URL = "http://45.124.144.116/www/stu/stu_rpt.php"
 
