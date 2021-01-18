@@ -6,6 +6,7 @@ URL = "http://45.124.144.116/www/stu/stulogin.php"
 CID = int(input("Enter CID: "))
 rollno = int(input("Enter university rollno: "))
 password = input("Enter MIS password: ")
+sem = input("Enter semester: ")
 
 data = {
         "t1":CID,
@@ -30,7 +31,7 @@ data = {
         "dt1":start,
         "dt2":today,
         "t":"1",
-        "sem":"5"
+        "sem":sem
         }
 
 ro = sess.post(URL, data)
@@ -57,3 +58,12 @@ for row in rows:
     print()
 
 print(rows[-1].td.text.strip().ljust(20))
+
+total_classes = 0
+attended_classes = 0
+
+for row in rows[:-1]:
+    total_classes += int(row.find_all("td")[2].text)
+    attended_classes += int(row.find_all("td")[3].text)
+
+print("Actual attendance:", attended_classes/total_classes*100)
