@@ -5,12 +5,10 @@ python:
 services:
   - docker
 
-install:
-  - docker build -t agpranjal/college-attendance:latest .
+install: skip
 
 script:
-  - echo "Docker build successfull"
-  - echo "Ready to deploy to dockerhub"
+  - docker build -t agpranjal/college-attendance:latest .
 
 deploy:
   provider: script
