@@ -1,0 +1,15 @@
+language: python3
+python3:
+  - "3.8"
+
+services:
+  - docker
+
+install:
+  - docker build -t agpranjal/college-attendance:latest .
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
