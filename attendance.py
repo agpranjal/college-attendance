@@ -8,6 +8,11 @@ rollno = int(input("Enter university rollno: "))
 password = input("Enter MIS password: ")
 sem = input("Enter semester: ")
 
+response = input("Are your credentials valid ? [y/n]: ")
+if response != "y":
+    print("Aborted")
+    exit(0)
+
 data = {
         "t1":CID,
         "t2":password
