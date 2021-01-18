@@ -1,5 +1,5 @@
-language: python3
-python3:
+language: python
+python:
   - "3.8"
 
 services:
@@ -7,6 +7,10 @@ services:
 
 install:
   - docker build -t agpranjal/college-attendance:latest .
+
+script:
+  - echo "Docker build successfull"
+  - echo "Ready to deploy to dockerhub"
 
 deploy:
   provider: script
